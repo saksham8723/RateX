@@ -10,12 +10,14 @@ function App() {
   const [page, setPage] = useState("Home");
   
   return (
-   <div className='flex flex-col h-screen justify-center item-center overflow-hidden max-w-120'>
+    <div className='flex flex-row justify-center w-screen h-screen '>
+   <div className='flex flex-col h-screen justify-center item-center overflow-hidden min-w-90 w-100 border-2 border-gray-400'>
         {page==="Home" && <Home />}
         {page==="Explore" && <Explore />}
         {page==="Connect" && <Friends />}
         {page==="Profile" && <Profile />}
         <Navbar page={page} setPage={setPage}/>
+   </div>
    </div>
   )
 }
